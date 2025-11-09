@@ -20,7 +20,7 @@
         border: 2px solid #000;
         box-sizing: border-box;
         height: 100vh;
-        aspect-ratio: 10 / 16; /* Vertical 10:16 layout */
+        aspect-ratio: 10 / 16;
         background: white;
         display: flex;
         flex-direction: column;
@@ -50,13 +50,19 @@
 
       .map {
         flex: 9;
-        background: lightblue; /* Placeholder for map */
+        background: url("map.jpg") center center / 107% no-repeat;
         display: flex;
         justify-content: center;
         align-items: center;
         font-size: 1.5rem;
         font-weight: 600;
         color: #333;
+      }
+      span {
+        background: rgba(86, 86, 86, 0.501);
+        padding: 0.5rem 1rem;
+        border-radius: 0.5rem;
+        color: white;
       }
     </style>
   </head>
@@ -67,7 +73,9 @@
         <button onclick="setLanguage('हिंदी')">हिंदी</button>
         <button onclick="setLanguage('मराठी')">मराठी</button>
       </div>
-      <div class="map" id="map">Language is —</div>
+      <div class="map" id="map">
+        <span> Language is English </span>
+      </div>
     </div>
 
     <script>
