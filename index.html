@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ATVM Interface</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: black;
+        height: 100vh;
+      }
+
+      .main {
+        border: 2px solid #000;
+        box-sizing: border-box;
+        height: 100vh;
+        aspect-ratio: 10 / 16; /* Vertical 10:16 layout */
+        background: white;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .buttons {
+        flex: 1;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        background: #eee;
+      }
+
+      .buttons button {
+        flex: 1;
+        height: 100%;
+        border: none;
+        background: #ddd;
+        font-size: 1.2rem;
+        font-weight: 600;
+        cursor: pointer;
+      }
+
+      .buttons button:not(:last-child) {
+        border-right: 1px solid #bbb;
+      }
+
+      .map {
+        flex: 9;
+        background: lightblue; /* Placeholder for map */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: #333;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <div class="buttons">
+        <button onclick="setLanguage('English')">English</button>
+        <button onclick="setLanguage('हिंदी')">हिंदी</button>
+        <button onclick="setLanguage('मराठी')">मराठी</button>
+      </div>
+      <div class="map" id="map">Language is —</div>
+    </div>
+
+    <script>
+      function setLanguage(lang) {
+        document.getElementById("map").textContent = `Language is ${lang}`;
+      }
+    </script>
+  </body>
+</html>
